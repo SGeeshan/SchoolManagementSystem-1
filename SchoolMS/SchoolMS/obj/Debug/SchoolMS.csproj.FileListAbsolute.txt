@@ -1,0 +1,10 @@
+E:\workspace\C#\SchoolMS\SchoolMS\bin\Debug\SchoolMS.exe.config
+E:\workspace\C#\SchoolMS\SchoolMS\bin\Debug\SchoolMS.exe
+E:\workspace\C#\SchoolMS\SchoolMS\bin\Debug\SchoolMS.pdb
+E:\workspace\C#\SchoolMS\SchoolMS\obj\Debug\SchoolMS.csprojAssemblyReference.cache
+E:\workspace\C#\SchoolMS\SchoolMS\obj\Debug\SchoolMS.Form1.resources
+E:\workspace\C#\SchoolMS\SchoolMS\obj\Debug\SchoolMS.Properties.Resources.resources
+E:\workspace\C#\SchoolMS\SchoolMS\obj\Debug\SchoolMS.csproj.GenerateResource.cache
+E:\workspace\C#\SchoolMS\SchoolMS\obj\Debug\SchoolMS.exe
+E:\workspace\C#\SchoolMS\SchoolMS\obj\Debug\SchoolMS.pdb
+E:\workspace\C#\SchoolMS\SchoolMS\obj\Debug\SchoolMS.Form2.resources
