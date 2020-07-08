@@ -16,7 +16,7 @@ namespace SchoolMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new studentRegistration());
+            Application.Run(new teacherRegistration());
         }
     }
 }

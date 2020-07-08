@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtMobile = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnImageUpload = new System.Windows.Forms.Button();
@@ -40,7 +40,7 @@
             this.radFemale = new System.Windows.Forms.RadioButton();
             this.radMale = new System.Windows.Forms.RadioButton();
             this.dateDOB = new System.Windows.Forms.DateTimePicker();
-            this.textNameWithInitials = new System.Windows.Forms.TextBox();
+            this.txtNameWithInitials = new System.Windows.Forms.TextBox();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,6 +52,13 @@
             this.dateDOE = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtuserName = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnTSubmint = new System.Windows.Forms.Button();
+            this.btnTReset = new System.Windows.Forms.Button();
+            this.btnTCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,12 +72,12 @@
             this.label9.TabIndex = 39;
             this.label9.Text = "Email";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(202, 406);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 22);
-            this.textBox1.TabIndex = 38;
+            this.txtEmail.Location = new System.Drawing.Point(202, 406);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(220, 22);
+            this.txtEmail.TabIndex = 38;
             // 
             // txtMobile
             // 
@@ -165,12 +172,12 @@
             this.dateDOB.Size = new System.Drawing.Size(101, 22);
             this.dateDOB.TabIndex = 28;
             // 
-            // textNameWithInitials
+            // txtNameWithInitials
             // 
-            this.textNameWithInitials.Location = new System.Drawing.Point(202, 138);
-            this.textNameWithInitials.Name = "textNameWithInitials";
-            this.textNameWithInitials.Size = new System.Drawing.Size(220, 22);
-            this.textNameWithInitials.TabIndex = 27;
+            this.txtNameWithInitials.Location = new System.Drawing.Point(202, 138);
+            this.txtNameWithInitials.Name = "txtNameWithInitials";
+            this.txtNameWithInitials.Size = new System.Drawing.Size(220, 22);
+            this.txtNameWithInitials.TabIndex = 27;
             // 
             // txtFullName
             // 
@@ -279,18 +286,87 @@
             this.dateTimePicker3.Size = new System.Drawing.Size(101, 22);
             this.dateTimePicker3.TabIndex = 43;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(29, 515);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(94, 20);
+            this.label12.TabIndex = 44;
+            this.label12.Text = "User Name";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(395, 515);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(83, 20);
+            this.label13.TabIndex = 45;
+            this.label13.Text = "Password";
+            // 
+            // txtuserName
+            // 
+            this.txtuserName.Location = new System.Drawing.Point(202, 513);
+            this.txtuserName.Name = "txtuserName";
+            this.txtuserName.Size = new System.Drawing.Size(165, 22);
+            this.txtuserName.TabIndex = 46;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(505, 515);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(165, 22);
+            this.txtPassword.TabIndex = 47;
+            // 
+            // btnTSubmint
+            // 
+            this.btnTSubmint.Location = new System.Drawing.Point(727, 589);
+            this.btnTSubmint.Name = "btnTSubmint";
+            this.btnTSubmint.Size = new System.Drawing.Size(75, 23);
+            this.btnTSubmint.TabIndex = 48;
+            this.btnTSubmint.Text = "Submit";
+            this.btnTSubmint.UseVisualStyleBackColor = true;
+            this.btnTSubmint.Click += new System.EventHandler(this.btnTSubmint_Click);
+            // 
+            // btnTReset
+            // 
+            this.btnTReset.Location = new System.Drawing.Point(850, 589);
+            this.btnTReset.Name = "btnTReset";
+            this.btnTReset.Size = new System.Drawing.Size(75, 23);
+            this.btnTReset.TabIndex = 49;
+            this.btnTReset.Text = "Reset";
+            this.btnTReset.UseVisualStyleBackColor = true;
+            // 
+            // btnTCancel
+            // 
+            this.btnTCancel.Location = new System.Drawing.Point(969, 589);
+            this.btnTCancel.Name = "btnTCancel";
+            this.btnTCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnTCancel.TabIndex = 50;
+            this.btnTCancel.Text = "Cancel";
+            this.btnTCancel.UseVisualStyleBackColor = true;
+            // 
             // teacherRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1071, 577);
+            this.ClientSize = new System.Drawing.Size(1138, 624);
+            this.Controls.Add(this.btnTCancel);
+            this.Controls.Add(this.btnTReset);
+            this.Controls.Add(this.btnTSubmint);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtuserName);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dateDOE);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnImageUpload);
@@ -301,7 +377,7 @@
             this.Controls.Add(this.radFemale);
             this.Controls.Add(this.radMale);
             this.Controls.Add(this.dateDOB);
-            this.Controls.Add(this.textNameWithInitials);
+            this.Controls.Add(this.txtNameWithInitials);
             this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -320,7 +396,7 @@
         #endregion
 
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtMobile;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnImageUpload;
@@ -331,7 +407,7 @@
         private System.Windows.Forms.RadioButton radFemale;
         private System.Windows.Forms.RadioButton radMale;
         private System.Windows.Forms.DateTimePicker dateDOB;
-        private System.Windows.Forms.TextBox textNameWithInitials;
+        private System.Windows.Forms.TextBox txtNameWithInitials;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -343,5 +419,12 @@
         private System.Windows.Forms.DateTimePicker dateDOE;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtuserName;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button btnTSubmint;
+        private System.Windows.Forms.Button btnTReset;
+        private System.Windows.Forms.Button btnTCancel;
     }
 }
