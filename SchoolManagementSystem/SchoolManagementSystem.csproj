@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{643CA8DA-8B87-41E8-9F73-16C3C0FDA85F}</ProjectGuid>
+    <ProjectGuid>{CBE94887-4ABD-4CAC-8E7C-513D483309A2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>SchoolManagementSystem</RootNamespace>
     <AssemblyName>SchoolManagementSystem</AssemblyName>
@@ -67,30 +67,17 @@
     <Compile Include="AcademicRegistration.Designer.cs">
       <DependentUpon>AcademicRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="delete.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="delete.Designer.cs">
-      <DependentUpon>delete.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="Home.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="NonAcademicRegistration.cs">
       <SubType>Form</SubType>
@@ -101,65 +88,21 @@
     <Compile Include="passwordHashing.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SchoolManagementSystemDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SchoolManagementSystemDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="SchoolManagementSystemDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SchoolManagementSystemDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="SearchStudent.cs">
+    <Compile Include="StudentRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchStudent.Designer.cs">
-      <DependentUpon>SearchStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StudentRegistretion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentRegistretion.Designer.cs">
-      <DependentUpon>StudentRegistretion.cs</DependentUpon>
+    <Compile Include="StudentRegistration.Designer.cs">
+      <DependentUpon>StudentRegistration.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AcademicRegistration.resx">
       <DependentUpon>AcademicRegistration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="delete.resx">
-      <DependentUpon>delete.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NonAcademicRegistration.resx">
       <DependentUpon>NonAcademicRegistration.cs</DependentUpon>
     </EmbeddedResource>
-=======
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestD.Designer.cs">
-      <DependentUpon>TestD.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
->>>>>>> 6e66d80f73f9e16fe436b6ed858e8540c1ab4ed9
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -169,11 +112,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SearchStudent.resx">
-      <DependentUpon>SearchStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StudentRegistretion.resx">
-      <DependentUpon>StudentRegistretion.cs</DependentUpon>
+    <EmbeddedResource Include="StudentRegistration.resx">
+      <DependentUpon>StudentRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -184,40 +124,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SchoolManagementSystemDataSet.xsc">
-      <DependentUpon>SchoolManagementSystemDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SchoolManagementSystemDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SchoolManagementSystemDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SchoolManagementSystemDataSet.xss">
-      <DependentUpon>SchoolManagementSystemDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SchoolManagementSystemDataSet1.xsc">
-      <DependentUpon>SchoolManagementSystemDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="SchoolManagementSystemDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SchoolManagementSystemDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SchoolManagementSystemDataSet1.xss">
-      <DependentUpon>SchoolManagementSystemDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SchoolManagementSystem.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SchoolManagementSystem_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>SchoolManagementSystem.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

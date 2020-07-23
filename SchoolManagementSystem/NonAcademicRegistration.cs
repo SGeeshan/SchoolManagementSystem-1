@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,29 +18,11 @@ namespace SchoolManagementSystem
             InitializeComponent();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked)
-            {
-                txtUserName.Visible = true;
-                txtPassword.Visible = true;
-                label11.Visible = true;
-                label12.Visible = true;
-            }
-            else
-            {
-                txtUserName.Visible = false;
-                txtPassword.Visible = false;
-                label11.Visible = false;
-                label12.Visible = false;
-            }
-        }
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtFullName.Text == "" || txtNameWithInitial.Text == "" || txtAddress.Text == "" || dateTimePicker1.Text == "" || txtMobile.Text == "" || dateTimePicker2.Text == "" || comboBox1.Text == "" || (txtPassword.Visible==true && txtPassword.Text=="")||(txtUserName.Visible==true && txtUserName.Text==""))
+                if (txtFullName.Text == "" || txtNameWithInitial.Text == "" || txtAddress.Text == "" || dateTimePicker1.Text == "" || txtMobile.Text == "" || dateTimePicker2.Text == "" || comboBox1.Text == "" || (txtPassword.Visible == true && txtPassword.Text == "") || (txtUserName.Visible == true && txtUserName.Text == ""))
                 {
                     MessageBox.Show("Fill All Required Field");
                 }
@@ -70,7 +51,7 @@ namespace SchoolManagementSystem
 
                     string job = comboBox1.SelectedItem.ToString();
 
-                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\AdeeSL\c#\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem.mdf;Integrated Security=True");
+                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\AdeeSL\c#\SMS\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem.mdf;Integrated Security=True;Connect Timeout=30");
                     con.Open();
 
                     string str = "INSERT INTO NonAcademic(full_name,initial,dob,gender,address,mobile,email,doe,subject,user_name,password,is_admin) VALUES('" + txtFullName.Text + "','" + txtNameWithInitial.Text + "','" + dateTimePicker1.Text + "','" + gender + "','" + txtAddress.Text + "','" + txtMobile.Text + "','" + txtEmail.Text + "','" + dateTimePicker2.Text + "','" + job + "','" + txtUserName.Text + "','" + pass.encodePassword(password) + "','" + admin + "')";
@@ -91,9 +72,27 @@ namespace SchoolManagementSystem
                 }
             }
 
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                txtUserName.Visible = true;
+                txtPassword.Visible = true;
+                label11.Visible = true;
+                label12.Visible = true;
+            }
+            else
+            {
+                txtUserName.Visible = false;
+                txtPassword.Visible = false;
+                label11.Visible = false;
+                label12.Visible = false;
             }
         }
     }

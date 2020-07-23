@@ -11,32 +11,42 @@ using System.Data.SqlClient;
 
 namespace SchoolManagementSystem
 {
-    public partial class login : Form
+    public partial class Login : Form
     {
-        public login()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\AdeeSL\c#\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem.mdf;Integrated Security=True");
-            con.Open();
-            string sql = "SELECT Id FROM Test WHERE name='" + txtname.Text + "' and password='" + txtpassword.Text + "'";
-            SqlCommand cmd = new SqlCommand(sql, con);
-            SqlDataReader dr;
-            dr = cmd.ExecuteReader();
-            if (dr.Read())
+            passwordHashing pass = new passwordHashing();
+            
+            try
             {
-                this.Visible = false;
-                Home h = new Home();
-                h.ShowDialog();
-             
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\AdeeSL\c#\SMS\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem.mdf;Integrated Security=True;Connect Timeout=30");
+                con.Open();
+
+                string str = "SELECT ac_id,nac_id FROM Academic,NonAcademic WHERE user_name='" + txtUserName.Text + "' and password='" + pass.encodePassword(txtPassword.Text) + "'";
+                SqlCommand cmd = new SqlCommand(str, con);
+                SqlDataReader dr;
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    MessageBox.Show("Login Success");
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalide");
+                }
             }
-            else
+            catch(SqlException ex)
             {
-                MessageBox.Show("Invalide");
+                MessageBox.Show(ex.Message);
             }
+            
+
         }
     }
 }

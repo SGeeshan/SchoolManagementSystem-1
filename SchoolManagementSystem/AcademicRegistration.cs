@@ -18,8 +18,6 @@ namespace SchoolManagementSystem
             InitializeComponent();
         }
 
-
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
@@ -40,7 +38,7 @@ namespace SchoolManagementSystem
                     {
                         admin = "T";
                     }
-                   
+
 
                     if (radMale.Checked)
                     {
@@ -52,9 +50,9 @@ namespace SchoolManagementSystem
                     }
 
                     string subject = comboBox1.SelectedItem.ToString();
-                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\AdeeSL\c#\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem.mdf;Integrated Security=True");
+                    SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = E:\AdeeSL\c#\SMS\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem.mdf;Integrated Security=True;Connect Timeout=30");
                     con.Open();
-                    string str = "INSERT INTO Academic(full_name,initial,dob,gender,address,mobile,email,doe,subject,user_name,password,is_admin) VALUES('" + txtFullName.Text + "','" + txtNameWithInitial.Text + "','" + dateTimePicker1.Text + "','" + gender + "','" + txtAddress.Text + "','" + txtMobile.Text + "','" + txtEmail.Text + "','" + dateTimePicker2.Text + "','"+ subject +"','" + txtUserName.Text + "','" + pass.encodePassword(password) + "','"+ admin +"')";
+                    string str = "INSERT INTO Academic(full_name,initial,dob,gender,address,mobile,email,doe,subject,user_name,password,is_admin) VALUES('" + txtFullName.Text + "','" + txtNameWithInitial.Text + "','" + dateTimePicker1.Text + "','" + gender + "','" + txtAddress.Text + "','" + txtMobile.Text + "','" + txtEmail.Text + "','" + dateTimePicker2.Text + "','" + subject + "','" + txtUserName.Text + "','" + pass.encodePassword(password) + "','" + admin + "')";
                     SqlCommand cmd = new SqlCommand(str, con);
                     cmd.ExecuteNonQuery();
 
@@ -70,11 +68,10 @@ namespace SchoolManagementSystem
                     con.Close();
                 }
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
     }
 }
